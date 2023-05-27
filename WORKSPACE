@@ -12,8 +12,8 @@ http_archive(
     name = "bazel_skylib",
     sha256 = "74d544d96f4a5bb630d465ca8bbcfe231e3594e5aae57e1edbf17a6eb3ca2506",
     urls = [
-        "https://storage.googleapis.com/mirror.tensorflow.org/github.com/bazelbuild/bazel-skylib/releases/download/1.3.0/bazel-skylib-1.3.0.tar.gz",
-        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.3.0/bazel-skylib-1.3.0.tar.gz",
+        "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/bazel-skylib-1.3.0.tar.gz",
+        "file:///C:/msys64/home/daniate/mediapipe/package/bazel-skylib-1.3.0.tar.gz",
     ],
 )
 load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
@@ -25,7 +25,7 @@ versions.check(minimum_bazel_version = "3.7.2")
 http_archive(
     name = "com_google_absl",
     urls = [
-        "https://github.com/abseil/abseil-cpp/archive/refs/tags/20230125.0.tar.gz",
+        "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/abseil-cpp-20230125.0.tar.gz",
     ],
     patches = [
         "@//third_party:com_google_absl_windows_patch.diff"
@@ -41,13 +41,13 @@ http_archive(
     name = "rules_cc",
     strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
 # The commit can be updated if the build passes. Last updated 6/23/22.
-    urls = ["https://github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.zip"],
+    urls = ["file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191.zip"],
 )
 
 http_archive(
    name = "rules_foreign_cc",
    strip_prefix = "rules_foreign_cc-0.1.0",
-   url = "https://github.com/bazelbuild/rules_foreign_cc/archive/0.1.0.zip",
+   url = "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/rules_foreign_cc-0.1.0.zip",
 )
 
 load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")
@@ -58,7 +58,7 @@ http_archive(
     name = "com_google_protobuf",
     sha256 = "87407cd28e7a9c95d9f61a098a53cf031109d451a7763e7dd1253abf8b4df422",
     strip_prefix = "protobuf-3.19.1",
-    urls = ["https://github.com/protocolbuffers/protobuf/archive/v3.19.1.tar.gz"],
+    urls = ["file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/v3.19.1.tar.gz"],
     patches = [
         "@//third_party:com_google_protobuf_fixes.diff"
     ],
@@ -75,7 +75,7 @@ http_archive(
     sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
     strip_prefix = "zlib-1.2.11",
     urls = [
-        "http://mirror.bazel.build/zlib.net/fossils/zlib-1.2.11.tar.gz",
+        "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/zlib-1.2.11.tar.gz",
         "http://zlib.net/fossils/zlib-1.2.11.tar.gz",  # 2017-01-15
     ],
     patches = [
@@ -131,7 +131,7 @@ all_content = """filegroup(name = "all", srcs = glob(["**"]), visibility = ["//v
 # Last updated 2021-07-02.
 http_archive(
     name = "com_google_googletest",
-    urls = ["https://github.com/google/googletest/archive/4ec4cd23f486bf70efcc5d2caa40f24368f752e3.zip"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/4ec4cd23f486bf70efcc5d2caa40f24368f752e3.zip"],
     strip_prefix = "googletest-4ec4cd23f486bf70efcc5d2caa40f24368f752e3",
     sha256 = "de682ea824bfffba05b4e33b67431c247397d6175962534305136aa06f92e049",
 )
@@ -139,7 +139,7 @@ http_archive(
 # Google Benchmark library v1.6.1 released on 2022-01-10.
 http_archive(
     name = "com_google_benchmark",
-    urls = ["https://github.com/google/benchmark/archive/refs/tags/v1.6.1.tar.gz"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/v1.6.1.tar.gz"],
     strip_prefix = "benchmark-1.6.1",
     sha256 = "6132883bc8c9b0df5375b16ab520fac1a85dc9e4cf5be59480448ece74b278d4",
     build_file = "@//third_party:benchmark.BUILD",
@@ -150,7 +150,7 @@ http_archive(
     name = "com_github_gflags_gflags",
     strip_prefix = "gflags-2.2.2",
     sha256 = "19713a36c9f32b33df59d1c79b4958434cb005b5b47dc5400a7a4b078111d9b5",
-    url = "https://github.com/gflags/gflags/archive/v2.2.2.zip",
+    url = "file:///C:/msys64/home/daniate/mediapipe/package/gflags-2.2.2.zip",
 )
 
 # 2020-08-21
@@ -159,7 +159,7 @@ http_archive(
     strip_prefix = "glog-0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6",
     sha256 = "58c9b3b6aaa4dd8b836c0fd8f65d0f941441fb95e27212c5eeb9979cfd3592ab",
     urls = [
-        "https://github.com/google/glog/archive/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
+        "file:///C:/msys64/home/daniate/mediapipe/package/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
     ],
 )
 http_archive(
@@ -168,7 +168,7 @@ http_archive(
     sha256 = "58c9b3b6aaa4dd8b836c0fd8f65d0f941441fb95e27212c5eeb9979cfd3592ab",
     build_file = "@//third_party:glog_no_gflags.BUILD",
     urls = [
-        "https://github.com/google/glog/archive/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
+        "file:///C:/msys64/home/daniate/mediapipe/package/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
     ],
     patches = [
         "@//third_party:com_github_glog_glog_9779e5ea6ef59562b030248947f787d1256132ae.diff",
@@ -181,7 +181,7 @@ http_archive(
 # easyexif
 http_archive(
     name = "easyexif",
-    url = "https://github.com/mayanklahiri/easyexif/archive/master.zip",
+    url = "file:///C:/msys64/home/daniate/mediapipe/package/easyexif-master.zip",
     strip_prefix = "easyexif-master",
     build_file = "@//third_party:easyexif.BUILD",
 )
@@ -190,7 +190,7 @@ http_archive(
 http_archive(
     name = "libyuv",
     # Error: operand type mismatch for `vbroadcastss' caused by commit 8a13626e42f7fdcf3a6acbb0316760ee54cda7d8.
-    urls = ["https://chromium.googlesource.com/libyuv/libyuv/+archive/2525698acba9bf9b701ba6b4d9584291a1f62257.tar.gz"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/libyuv-2525698acba9bf9b701ba6b4d9584291a1f62257.tar.gz"],
     build_file = "@//third_party:libyuv.BUILD",
 )
 
@@ -200,7 +200,7 @@ http_archive(
     name = "com_google_protobuf_javalite",
     sha256 = "87407cd28e7a9c95d9f61a098a53cf031109d451a7763e7dd1253abf8b4df422",
     strip_prefix = "protobuf-3.19.1",
-    urls = ["https://github.com/protocolbuffers/protobuf/archive/v3.19.1.tar.gz"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/v3.19.1.tar.gz"],
 )
 
 load("@//third_party/flatbuffers:workspace.bzl", flatbuffers = "repo")
@@ -209,7 +209,7 @@ flatbuffers()
 http_archive(
     name = "com_google_audio_tools",
     strip_prefix = "multichannel-audio-tools-1f6b1319f13282eda6ff1317be13de67f4723860",
-    urls = ["https://github.com/google/multichannel-audio-tools/archive/1f6b1319f13282eda6ff1317be13de67f4723860.zip"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/multichannel-audio-tools-1f6b1319f13282eda6ff1317be13de67f4723860.zip"],
     sha256 = "fe346e1aee4f5069c4cbccb88706a9a2b2b4cf98aeb91ec1319be77e07dd7435",
     repo_mapping = {"@com_github_glog_glog" : "@com_github_glog_glog_no_gflags"},
     # TODO: Fix this in AudioTools directly
@@ -220,7 +220,7 @@ http_archive(
 http_archive(
     name = "pffft",
     strip_prefix = "jpommier-pffft-7c3b5a7dc510",
-    urls = ["https://bitbucket.org/jpommier/pffft/get/7c3b5a7dc510.zip"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/jpommier-pffft-7c3b5a7dc510.zip"],
     build_file = "@//third_party:pffft.BUILD",
 )
 
@@ -230,7 +230,7 @@ http_archive(
     strip_prefix = "sentencepiece-1.0.0",
     sha256 = "c05901f30a1d0ed64cbcf40eba08e48894e1b0e985777217b7c9036cac631346",
     urls = [
-        "https://github.com/google/sentencepiece/archive/1.0.0.zip",
+        "file:///C:/msys64/home/daniate/mediapipe/package/sentencepiece-1.0.0.zip",
     ],
     patches = [
         "@//third_party:com_google_sentencepiece_no_gflag_no_gtest.diff",
@@ -254,7 +254,7 @@ http_archive(
     sha256 = "f64647276f7288d1b1fe4c89581d51404d0ce4ae97f2bcc4c19bd667549adca8",
     strip_prefix = "text-2.2.0",
     urls = [
-        "https://github.com/tensorflow/text/archive/v2.2.0.zip",
+        "file:///C:/msys64/home/daniate/mediapipe/package/text-2.2.0.zip",
     ],
     patches = [
         "@//third_party:tensorflow_text_remove_tf_deps.diff",
@@ -269,7 +269,7 @@ http_archive(
     sha256 = "e06b718c129f4019d6e7aa8b7631bee38d3d450dd980246bfaf493eb7db67868",
     strip_prefix = "re2-fe4a310131c37f9a7e7f7816fa6ce2a8b27d65a8",
     urls = [
-        "https://github.com/google/re2/archive/fe4a310131c37f9a7e7f7816fa6ce2a8b27d65a8.tar.gz",
+        "file:///C:/msys64/home/daniate/mediapipe/package/re2-fe4a310131c37f9a7e7f7816fa6ce2a8b27d65a8.tar.gz",
     ],
 )
 
@@ -277,7 +277,7 @@ http_archive(
 http_archive(
     name = "pybind11_bazel",
     strip_prefix = "pybind11_bazel-203508e14aab7309892a1c5f7dd05debda22d9a5",
-    urls = ["https://github.com/pybind/pybind11_bazel/archive/203508e14aab7309892a1c5f7dd05debda22d9a5.zip"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/pybind11_bazel-203508e14aab7309892a1c5f7dd05debda22d9a5.zip"],
     sha256 = "75922da3a1bdb417d820398eb03d4e9bd067c4905a4246d35a44c01d62154d91",
 )
 
@@ -285,7 +285,7 @@ http_archive(
 http_archive(
     name = "pybind11",
     urls = [
-        "https://github.com/pybind/pybind11/archive/v2.10.1.zip",
+        "file:///C:/msys64/home/daniate/mediapipe/package/pybind11-2.10.1.zip",
     ],
     sha256 = "fcf94065efcfd0a7a828bacf118fa11c43f6390d0c805e3e6342ac119f2e9976",
     strip_prefix = "pybind11-2.10.1",
@@ -297,14 +297,14 @@ http_archive(
     sha256 = "baa1f53568283630a5055c85f0898b8810f7a6431bd01bbaedd32b4c1defbcb1",
     strip_prefix = "pybind11_protobuf-3594106f2df3d725e65015ffb4c7886d6eeee683",
     urls = [
-        "https://github.com/pybind/pybind11_protobuf/archive/3594106f2df3d725e65015ffb4c7886d6eeee683.tar.gz",
+        "file:///C:/msys64/home/daniate/mediapipe/package/pybind11_protobuf-3594106f2df3d725e65015ffb4c7886d6eeee683.tar.gz",
     ],
 )
 
 # Point to the commit that deprecates the usage of Eigen::MappedSparseMatrix.
 http_archive(
     name = "ceres_solver",
-    url = "https://github.com/ceres-solver/ceres-solver/archive/123fba61cf2611a3c8bddc9d91416db26b10b558.zip",
+    url = "file:///C:/msys64/home/daniate/mediapipe/package/ceres-solver-123fba61cf2611a3c8bddc9d91416db26b10b558.zip",
     patches = [
         "@//third_party:ceres_solver_compatibility_fixes.diff"
     ],
@@ -319,7 +319,7 @@ http_archive(
     name = "opencv",
     build_file_content = all_content,
     strip_prefix = "opencv-3.4.10",
-    urls = ["https://github.com/opencv/opencv/archive/3.4.10.tar.gz"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/3.4.10.tar.gz"],
 )
 
 new_local_repository(
@@ -360,7 +360,7 @@ http_archive(
     build_file = "@//third_party:opencv_android.BUILD",
     strip_prefix = "OpenCV-android-sdk",
     type = "zip",
-    url = "https://github.com/opencv/opencv/releases/download/3.4.3/opencv-3.4.3-android-sdk.zip",
+    url = "file:///C:/msys64/home/daniate/mediapipe/package/opencv-3.4.3-android-sdk.zip",
 )
 
 # After OpenCV 3.2.0, the pre-compiled opencv2.framework has google protobuf symbols, which will
@@ -372,7 +372,7 @@ http_archive(
     sha256 = "7dd536d06f59e6e1156b546bd581523d8df92ce83440002885ec5abc06558de2",
     build_file = "@//third_party:opencv_ios.BUILD",
     type = "zip",
-    url = "https://github.com/opencv/opencv/releases/download/3.2.0/opencv-3.2.0-ios-framework.zip",
+    url = "file:///C:/msys64/home/daniate/mediapipe/package/opencv-3.2.0-ios-framework.zip",
 )
 
 # Building an opencv.xcframework from the OpenCV 4.5.3 sources is necessary for
@@ -395,7 +395,7 @@ http_archive(
     name = "stblib",
     strip_prefix = "stb-b42009b3b9d4ca35bc703f5310eedc74f584be58",
     sha256 = "13a99ad430e930907f5611325ec384168a958bf7610e63e60e2fd8e7b7379610",
-    urls = ["https://github.com/nothings/stb/archive/b42009b3b9d4ca35bc703f5310eedc74f584be58.tar.gz"],
+    urls = ["file:///C:/msys64/home/daniate/mediapipe/package/stb-b42009b3b9d4ca35bc703f5310eedc74f584be58.tar.gz"],
     build_file = "@//third_party:stblib.BUILD",
     patches = [
         "@//third_party:stb_image_impl.diff"
@@ -409,7 +409,7 @@ http_archive(
 
 http_archive(
     name = "google_toolbox_for_mac",
-    url = "https://github.com/google/google-toolbox-for-mac/archive/v2.2.1.zip",
+    url = "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/google-toolbox-for-mac-2.2.1.zip",
     sha256 = "e3ac053813c989a88703556df4dc4466e424e30d32108433ed6beaec76ba4fdc",
     strip_prefix = "google-toolbox-for-mac-2.2.1",
     build_file = "@//third_party:google_toolbox_for_mac.BUILD",
@@ -424,7 +424,7 @@ http_archive(
     name = "rules_jvm_external",
     strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
     sha256 = RULES_JVM_EXTERNAL_SHA,
-    url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
+    url = "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/rules_jvm_external-4.0.zip",
 )
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
@@ -478,7 +478,7 @@ http_archive(
     sha256 = "e0a111000aeed2051f29fcc7a3f83be3ad8c6c93c186e64beb1ad313f0c7f9f9",
     strip_prefix = "rules_closure-cf1e44edb908e9616030cc83d085989b8e6cd6df",
     urls = [
-        "http://mirror.tensorflow.org/github.com/bazelbuild/rules_closure/archive/cf1e44edb908e9616030cc83d085989b8e6cd6df.tar.gz",
+        "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/rules_closure-cf1e44edb908e9616030cc83d085989b8e6cd6df.tar.gz",
         "https://github.com/bazelbuild/rules_closure/archive/cf1e44edb908e9616030cc83d085989b8e6cd6df.tar.gz",  # 2019-04-04
     ],
 )
@@ -490,7 +490,7 @@ _TENSORFLOW_SHA256 = "ba98de6ea5f720071246691a1536ecd5e1b1763033e8c82a1e721a06d3
 http_archive(
     name = "org_tensorflow",
     urls = [
-      "https://github.com/tensorflow/tensorflow/archive/%s.tar.gz" % _TENSORFLOW_GIT_COMMIT,
+      "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/tensorflow-581840e12c7762a3deef66b25a549218ca1e3983.tar.gz",
     ],
     patches = [
         "@//third_party:org_tensorflow_compatibility_fixes.diff",
@@ -515,7 +515,7 @@ http_archive(
   sha256 = "14d5527a943a25bc648c28a9961f954f70ba4d79c0a9ca5ae226e1831d72fe80",
   strip_prefix = "libedgetpu-3164995622300286ef2bb14d7fdc2792dae045b7",
   urls = [
-    "https://github.com/google-coral/libedgetpu/archive/3164995622300286ef2bb14d7fdc2792dae045b7.tar.gz"
+    "file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/libedgetpu-3164995622300286ef2bb14d7fdc2792dae045b7.tar.gz"
   ],
 )
 load("@libedgetpu//:workspace.bzl", "libedgetpu_dependencies")
@@ -529,7 +529,10 @@ cc_crosstool(name = "crosstool")
 http_archive(
     name = "build_bazel_rules_nodejs",
     sha256 = "94070eff79305be05b7699207fbac5d2608054dd53e6109f7d00d923919ff45a",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.2/rules_nodejs-5.8.2.tar.gz"],
+    urls = [
+		"file:///C:/msys64/home/daniate/mediapipe/package/rules_nodejs-5.8.2.tar.gz",
+		"https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.2/rules_nodejs-5.8.2.tar.gz"
+	],
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
@@ -549,14 +552,14 @@ http_archive(
     name = "rules_proto_grpc",
     sha256 = "bbe4db93499f5c9414926e46f9e35016999a4e9f6e3522482d3760dc61011070",
     strip_prefix = "rules_proto_grpc-4.2.0",
-    urls = ["https://github.com/rules-proto-grpc/rules_proto_grpc/archive/4.2.0.tar.gz"],
+    urls = ["file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/4.2.0.tar.gz"],
 )
 
 http_archive(
     name = "com_google_protobuf_javascript",
     sha256 = "35bca1729532b0a77280bf28ab5937438e3dcccd6b31a282d9ae84c896b6f6e3",
     strip_prefix = "protobuf-javascript-3.21.2",
-    urls = ["https://github.com/protocolbuffers/protobuf-javascript/archive/refs/tags/v3.21.2.tar.gz"],
+    urls = ["file:///C:/Users/daniate/source/gitea/mediapipe-all/mediapipe/package/protobuf-javascript-3.21.2.tar.gz"],
 )
 
 load("@rules_proto_grpc//:repositories.bzl", "rules_proto_grpc_toolchains", "rules_proto_grpc_repos")
